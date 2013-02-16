@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfsamples.nprogramming.wordpress.com" elementFormDefault="qualified" targetNamespace="http://wcfsamples.nprogramming.wordpress.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8088/CalculatorService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfSample.Hosting.CalculatorService.Common" />
+  <xs:element name="Eval">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfSample.Hosting.CalculatorService.Common" minOccurs="0" name="entity" nillable="true" type="q1:CalculatorEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EvalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EvalResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost service="Wcf.Rest.Service.EvalService"
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

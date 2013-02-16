@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfsamples.nprogramming.wordpress.com" elementFormDefault="qualified" targetNamespace="http://wcfsamples.nprogramming.wordpress.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Eval">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entity" nillable="true" type="tns:CalculatorEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CalculatorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Calculation" type="tns:Calculation" />
+      <xs:element minOccurs="0" name="FirstValue" type="xs:double" />
+      <xs:element minOccurs="0" name="SecondValue" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculatorEntity" nillable="true" type="tns:CalculatorEntity" />
+  <xs:simpleType name="Calculation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Add" />
+      <xs:enumeration value="Subtract" />
+      <xs:enumeration value="Multiply" />
+      <xs:enumeration value="Divide" />
+      <xs:enumeration value="Square" />
+      <xs:enumeration value="Sqrt" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Calculation" nillable="true" type="tns:Calculation" />
+  <xs:element name="EvalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EvalResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

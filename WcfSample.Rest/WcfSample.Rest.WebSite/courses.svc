@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost service="Wcf.Rest.Service.CourseService"
+    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
